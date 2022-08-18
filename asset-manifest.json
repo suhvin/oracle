@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/oracle/static/css/main.3b4c00e7.css",
-    "main.js": "/oracle/static/js/main.6d3bcb3b.js",
+    "main.css": "/oracle/static/css/main.8841a06a.css",
+    "main.js": "/oracle/static/js/main.e5f97cbe.js",
     "index.html": "/oracle/index.html",
-    "main.3b4c00e7.css.map": "/oracle/static/css/main.3b4c00e7.css.map",
-    "main.6d3bcb3b.js.map": "/oracle/static/js/main.6d3bcb3b.js.map"
+    "main.8841a06a.css.map": "/oracle/static/css/main.8841a06a.css.map",
+    "main.e5f97cbe.js.map": "/oracle/static/js/main.e5f97cbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b4c00e7.css",
-    "static/js/main.6d3bcb3b.js"
+    "static/css/main.8841a06a.css",
+    "static/js/main.e5f97cbe.js"
   ]
 }

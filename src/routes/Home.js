@@ -145,7 +145,7 @@ const Home = () => {
                         <Text id={styles.text} fontFamily='Noto Sans CJK KR' ml='28px' position='relative' fontSize='14px'>학생정보</Text>
                     </div>
                     <Menu>
-                        <MenuButton className={styles.in} fontSize='12px' as={Button} rightIcon={<ChevronDownIcon />}>
+                        <MenuButton className={styles.in} fontSize='11px' as={Button} rightIcon={<ChevronDownIcon />}>
                             {level}
                         </MenuButton>
                         <MenuList>
@@ -155,7 +155,7 @@ const Home = () => {
                         </MenuList>
                     </Menu>
                     <Menu>
-                        <MenuButton className={styles.in} fontSize='12px' as={Button} rightIcon={<ChevronDownIcon/>}>
+                        <MenuButton className={styles.in} fontSize='11px' as={Button} rightIcon={<ChevronDownIcon/>}>
                             {main}
                         </MenuButton>
                         <MenuList>
@@ -165,7 +165,7 @@ const Home = () => {
                         </MenuList>
                     </Menu>
                     <Menu>
-                        <MenuButton className={styles.in2} fontSize='12px' as={Button} rightIcon={<ChevronDownIcon />}>
+                        <MenuButton className={styles.in2} fontSize='11px' as={Button} rightIcon={<ChevronDownIcon />}>
                             {over}
                         </MenuButton>
                         <MenuList>
@@ -174,7 +174,7 @@ const Home = () => {
                         </MenuList>
                     </Menu>
                     <Menu>
-                        <MenuButton className={styles.in3} fontSize='12px' as={Button} rightIcon={<ChevronDownIcon />}>
+                        <MenuButton className={styles.in3} fontSize='11px' as={Button} rightIcon={<ChevronDownIcon />}>
                             {end}
                         </MenuButton>
                         <MenuList>
@@ -183,7 +183,7 @@ const Home = () => {
                         </MenuList>
                     </Menu>
                     <Menu>
-                        <MenuButton className={styles.in4} fontSize='12px' as={Button} rightIcon={<ChevronDownIcon />}>
+                        <MenuButton className={styles.in4} fontSize='11px' as={Button} rightIcon={<ChevronDownIcon />}>
                             {num}
                         </MenuButton>
                         <MenuList>
@@ -200,7 +200,7 @@ const Home = () => {
                     <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='졸업요건학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="finish"   onChange={onChange2} />
                     <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='담은인원 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
                     
-                    <Button id={styles.btn} variant='solid' w="80%" onClick={onSubmit}>
+                    <Button id={styles.btn} fontSize='14px' variant='solid' w="80%" onClick={onSubmit}>
                         Submit
                     </Button>
                 </Box>

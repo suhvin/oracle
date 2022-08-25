@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.popCheck {
+  position: absolute;
+  width: 178px;
+  height: 36px;
+  left: 50%;
+  margin: 0 0 0 -89px;
+  
+  /* secondary / lightpurple */
+  
+  background: #ECF3F7;
+  border-radius: 8px;
+  border-width: 0px;
+
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 168%;
+  /* or 20px */
+  
+  letter-spacing: -0.03em;
+
+  text-align: center;
+  
+  /* primary / purple */
+  
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pop{
+  position: absolute;
+  width: 350px;
+  height: 34px;
+  left: 50%;
+  
+  margin: 0 0 0 -175px;
+  
+  /* pop */
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10.5px;
+  line-height: 160%;
+  /* or 17px */
+  
+  text-align: center;
+  letter-spacing: -0.045em;
+  
+  /* grayscale/gray 7 */
+  
+  color: #808080;
+}
+
+.content{
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 50%;
+  
+  margin: 0 0 0 -175px;
+  
+  /* content */
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 168%;
+  /* identical to box height, or 24px */
+  
+  text-align: center;
+  letter-spacing: -0.03em;
+  
+  color: #000000;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup.openPopup {
+  display: flex;
+  align-items: center;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-bg-show 0.3s;
+}
+
+@-moz-keyframes fadein { /* Firefox */
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-o-keyframes fadein { /* Opera */
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

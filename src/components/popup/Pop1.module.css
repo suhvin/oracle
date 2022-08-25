@@ -1,0 +1,63 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#box {
+  position: absolute;
+  width: 242px;
+  height: 159px;
+  left: 50%;
+  top: 50%;
+
+  margin: -80px 0 0 -121px;
+
+  background: #FFFFFF;
+  /* shadow_gray */
+
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+#text1 {
+  top: 20px;
+}
+
+#text2 {
+  top: 56px;
+}
+
+#btn1 {
+  bottom: 16px;
+}
+
+.popup.openPopup {
+  display: flex;
+  align-items: center;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-bg-show 0.3s;
+}
+@keyframes popup-show {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes popup-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,110 @@
+#blue{
+    /* position: absolute; */
+    /* display: flex;
+    flex-direction: row; */
+}
+
+#logo{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 40px/2);
+    left: calc(10% - 40px/2);
+}
+
+#top{
+    width: 100%;
+    height: 40px;
+}
+
+#main{
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box{
+    /* width: 300px;
+    height: 250px; */
+
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 2%;
+
+    /* box-shadow: 2px 4px 8px #888888;
+    border-width: 0px;
+    border-radius: 10px; */
+}
+
+.in{
+    width: 30.3%;
+    height: 35px;
+    margin: 2% 3% 0 0;
+    font-size: 10px;
+}
+
+.in2{
+    width: 30.3%;
+    height: 35px;
+    margin: 2% 0 0 0;
+    font-size: 10px;
+}
+
+.in3{
+    width: 47%;
+    height: 35px;
+    margin: 2% 3% 0 0;
+    font-size: 10px;
+}
+
+.in4{
+    width: 47%;
+    height: 35px;
+    margin: 2% 0 0 0;
+    font-size: 10px;
+}
+
+.in5{
+    width: 47%;
+    margin: 2% 3% 0 0;
+    font-size: 10px;
+}
+
+.in6{
+    width: 47%;
+    margin: 2% 0 0 0;
+    font-size: 10px;
+}
+
+#btn{
+    color: black;
+    margin: auto;
+    margin-top: 7%;
+    
+}
+
+#happy{
+    width: 100px;
+    height: 100px;
+}
+
+#box2{
+    width: 110px;
+    height: 28px;
+    margin-top: 10px;
+    margin-right: calc(100% - 110px);
+
+    border-width: 0 0 0.5px 0;
+    border-color: #777777;
+}
+
+#text{
+    /* width: 500px;
+    text-decoration: underline; */
+}

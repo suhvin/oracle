@@ -118,7 +118,11 @@ const Home = () => {
         }else{
             if(cutSafe==0){
                 return(
-                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>이 과목의 수강신청에 성공하려면<br/>{cutMessage}마일리지를 넣어주세요!</Pop1>     
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>신청할 수 없는 과목에<br/>신청하려 하시는군요!</Pop1>     
+                )
+            }else if(cutSafe==37){
+                return(
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>마일리지 풀로 박아도<br/>실패입니다! ㅎㅎㅎ</Pop1>     
                 )
             }else{
                 return(
@@ -201,7 +205,10 @@ const Home = () => {
                     <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='담은인원 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
                     
                     <Button id={styles.btn} fontSize='14px' variant='solid' w="80%" onClick={onSubmit}>
-                        Submit
+                        {((lec!="")&&(main!="전공자 여부")&&(level!="학년")&&(over!="초수강 여부")&&(end!="졸업신청 여부")&&(num!="신청과목수"))
+                        ? "Submit"
+                        : "Please enter the info"
+                        }
                     </Button>
                 </Box>
                 {text()}

@@ -140,7 +140,7 @@ const Home = () => {
                 
             <div id={styles.main}>
                 <Box id={styles.box} bg='#ffffff' w='80%' h='450px' p='0px' color='black' borderWidth='1px' borderRadius='lg'>
-                    <Input mt='0px' w='96.6%' placeholder='마일리지 컷을 예측하고 싶은 과목의 학정 번호를 입력해 주세요 (AMR3104-01-00)' size='sm' borderRadius='md' p='20px' onChange={onChange}/>
+                    <Input mt='0px' w='96.6%' placeholder='마일리지 컷을 예측하고 싶은 과목의 학정 번호를 입력해 주세요 (AMR3104-01-00)' fontSize='13px' borderRadius='md' p='20px' onChange={onChange}/>
                     <div id={styles.box2}>
                         <Text id={styles.text} fontFamily='Noto Sans CJK KR' ml='28px' position='relative' fontSize='14px'>학생정보</Text>
                     </div>

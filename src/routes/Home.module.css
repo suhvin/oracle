@@ -72,21 +72,20 @@
 
 .in5{
     width: 47%;
-    margin: 2% 3% 0 0;
+    margin: 5% 3% 0 0;
     font-size: 10px;
 }
 
 .in6{
     width: 47%;
-    margin: 2% 0 0 0;
+    margin: 5% 0 0 0;
     font-size: 10px;
 }
 
 #btn{
     color: black;
     margin: auto;
-    margin-top: 7%;
-    
+    margin-top: 4%;
 }
 
 #happy{

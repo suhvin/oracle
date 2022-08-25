@@ -195,10 +195,10 @@ const Home = () => {
                             <MenuItem onClick={() => setNum("6개")}>6개</MenuItem>
                         </MenuList>
                     </Menu>
-                    <Input className={styles.in5} type='number' mt='0px' fontSize='10px' w='47%' placeholder='직전학기 이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="before"   onChange={onChange2} />
-                    <Input className={styles.in6} type='number' mt='0px' fontSize='10px' w='47%' placeholder='총이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="full"   onChange={onChange2} />
-                    <Input className={styles.in5} type='number' mt='0px' fontSize='10px' w='47%' placeholder='졸업요건학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="finish"   onChange={onChange2} />
-                    <Input className={styles.in6} type='number' mt='0px' fontSize='10px' w='47%' placeholder='담은인원 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
+                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='직전학기 이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="before"   onChange={onChange2} />
+                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='총이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="full"   onChange={onChange2} />
+                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='졸업요건학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="finish"   onChange={onChange2} />
+                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='담은인원 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
                     
                     <Button id={styles.btn} variant='solid' w="80%" onClick={onSubmit}>
                         Submit

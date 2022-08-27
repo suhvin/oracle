@@ -1,0 +1,33 @@
+#title{
+    margin-left: calc(10%)
+}
+
+#lecs{
+    width: 80%;
+    margin-left: calc(10% - 20px);
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+#one{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+#two{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+#three{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+#four{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}

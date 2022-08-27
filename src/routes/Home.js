@@ -20,6 +20,7 @@ import { dbService } from "myBase";
 import makeId from "utils/makeId";
 import logo from "assets/img/etc/logo.png";
 import { size } from "lodash";
+import Vote from "components/vote/Vote";
 
 const Home = () => {
 
@@ -44,7 +45,7 @@ const Home = () => {
     //const [term, setTerm] = useState("졸업요건학점");
 
     const onSubmit = () => {
-        if((lec!="")&&(main!="전공자 여부")&&(level!="학년")&&(over!="초수강 여부")&&(end!="졸업신청 여부")&&(num!="신청과목수")){
+        if((lec!="")&&(main!="전공자 여부")&&(level!="학년")&&(over!="초수강 여부")&&(end!="졸업신청 여부")&&(num!="신청과목수")&&(before!=-1)&&(full!=-1)&&(finish!=-1)&&(people!=-1)){
             readUpdate(lec, level, main, over, end, num, before, full, finish, people, setCount);
             //readUpdate(lec, level, main, num, term, setCount);
         }
@@ -122,11 +123,19 @@ const Home = () => {
                 )
             }else if(cutSafe==37){
                 return(
-                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>마일리지 풀로 박아도<br/>실패입니다! ㅎㅎㅎ</Pop1>     
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>이 과목의 예측 컷은 {cutMessage}입니다.<br/>당신은 {cutMessage+2}마일리지로 수강 가능합니다.</Pop1>     
+                )
+            }else if(cutSafe==38){
+                return(
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>이 과목의 예측 컷은 {cutMessage}입니다.<br/>당신은 {cutMessage+2}로도 힘들어 다른 과목을 알아보세요.</Pop1>     
+                )
+            }else if(cutSafe==-2){
+                return(
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>제대로된 강의 학정번호를<br/>입력하지 않았습니다.</Pop1>     
                 )
             }else{
                 return(
-                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>이 과목의 컷은 {cutMessage}마일리지<br/>당신은 {cutSafeMessage}을 넣어야 안전함!</Pop1>       
+                    <Pop1 state={popOpen} close={closePop} title={"Mileage Cut"}>이 과목의 예측 컷은 {cutMessage}입니다.<br/>당신의 추천 마일리지 컷은 {cutMessage}입니다.</Pop1>       
                 )
             }
         }
@@ -143,7 +152,7 @@ const Home = () => {
             </div>
                 
             <div id={styles.main}>
-                <Box id={styles.box} bg='#ffffff' w='80%' h='450px' p='0px' color='black' borderWidth='1px' borderRadius='lg'>
+                <Box id={styles.box} bg='#ffffff' w='80%' h='480px' p='0px' color='black' borderWidth='1px' borderRadius='lg'>
                     <Input mt='0px' w='96.6%' placeholder='마일리지 컷을 예측하고 싶은 과목의 학정 번호를 입력해 주세요 (AMR3104-01-00)' fontSize='13px' borderRadius='md' p='20px' onChange={onChange}/>
                     <div id={styles.box2}>
                         <Text id={styles.text} fontFamily='Noto Sans CJK KR' ml='28px' position='relative' fontSize='14px'>학생정보</Text>
@@ -199,20 +208,26 @@ const Home = () => {
                             <MenuItem onClick={() => setNum("6개")}>6개</MenuItem>
                         </MenuList>
                     </Menu>
-                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='직전학기 이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="before"   onChange={onChange2} />
-                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='총이수학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="full"   onChange={onChange2} />
-                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='졸업요건학점 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="finish"   onChange={onChange2} />
-                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='담은인원 (모르면 적지 마시오)' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
+                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='직전학기 이수학점' size='sm' borderRadius='md' p='20px' name="before"   onChange={onChange2} />
+                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='총이수학점' size='sm' borderRadius='md' p='20px' name="full"   onChange={onChange2} />
+                    <Input className={styles.in5} type='number' mt='2%' fontSize='10px' w='47%' placeholder='졸업요건학점' size='sm' borderRadius='md' p='20px' name="finish"   onChange={onChange2} />
+                    <Input className={styles.in6} type='number' mt='2%' fontSize='10px' w='47%' placeholder='담은인원' size='sm' borderRadius='md' p='20px' name="people"   onChange={onChange2} />
                     
                     <Button id={styles.btn} fontSize='14px' variant='solid' w="80%" onClick={onSubmit}>
-                        {((lec!="")&&(main!="전공자 여부")&&(level!="학년")&&(over!="초수강 여부")&&(end!="졸업신청 여부")&&(num!="신청과목수"))
+                        {((lec!="")&&(main!="전공자 여부")&&(level!="학년")&&(over!="초수강 여부")&&(end!="졸업신청 여부")&&(num!="신청과목수")&&(before!=-1)&&(full!=-1)&&(finish!=-1)&&(people!=-1))
                         ? "Submit"
                         : "Please enter the info"
                         }
                     </Button>
                 </Box>
-                {text()}
+                {text(cutMessage, cutSafeMessage)}
             </div>
+            <div id={styles.top}></div>
+            <div id={styles.top}></div>
+            <Vote/>
+            <div id={styles.top}></div>
+            <div id={styles.top}></div>
+            <div id={styles.top}></div>
         </>
     );
 };
